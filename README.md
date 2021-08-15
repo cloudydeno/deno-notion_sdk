@@ -15,7 +15,7 @@
 Import and initialize a client using an **integration token** or an OAuth **access token**.
 
 ```js
-import { Client } from "https://raw.githubusercontent.com/cloudydeno/deno-notion_sdk/9a3f8c3/src/index.ts";
+import { Client } from "https://raw.githubusercontent.com/cloudydeno/deno-notion_sdk/v0.2.4-0/src/index.ts";
 
 // Initializing a client
 const notion = new Client({
