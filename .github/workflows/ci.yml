@@ -19,3 +19,4 @@ jobs:
         with:
           deno-version: ${{ matrix.deno-version }}
       - run: time deno cache src/index.ts
+      - run: time deno cache examples/*/index.ts
