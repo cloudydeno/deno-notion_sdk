@@ -9,7 +9,6 @@ export type SupportedRequestInfo = string
 type _assertSupportedInfoIsSubtype = Assert<RequestInfo, SupportedRequestInfo>
 
 export type SupportedRequestInit = {
-  agent?: NodeRequestInit["agent"]
   body?: NonNullable<RequestInit["body"]>
   headers?: NonNullable<RequestInit["headers"]>
   method?: RequestInit["method"]
