@@ -1,5 +1,5 @@
-export { default as Client } from "./Client"
-export { LogLevel, Logger } from "./logging"
+export { default as Client } from "./Client.ts"
+export { LogLevel, Logger } from "./logging.ts"
 export {
   // Error codes
   NotionErrorCode,
@@ -12,4 +12,4 @@ export {
   RequestTimeoutError,
   // Error helpers
   isNotionClientError,
-} from "./errors"
+} from "./errors.ts"

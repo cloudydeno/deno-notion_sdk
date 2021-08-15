@@ -1,4 +1,3 @@
-import type { Agent } from "http"
 import {
   Logger,
   LogLevel,
@@ -74,8 +73,6 @@ export interface ClientOptions {
   logger?: Logger
   notionVersion?: string
   fetch?: SupportedFetch
-  /** Silently ignored in the browser */
-  agent?: Agent
 }
 
 export interface RequestParameters {
@@ -94,7 +91,6 @@ export default class Client {
   #timeoutMs: number
   #notionVersion: string
   #fetch: SupportedFetch
-  #agent: Agent | undefined
   #userAgent: string
 
   static readonly defaultNotionVersion = "2021-08-02"
@@ -107,7 +103,6 @@ export default class Client {
     this.#timeoutMs = options?.timeoutMs ?? 60_000
     this.#notionVersion = options?.notionVersion ?? Client.defaultNotionVersion
     this.#fetch = options?.fetch ?? nodeFetch
-    this.#agent = options?.agent
     this.#userAgent = `notionhq-client/${PACKAGE_VERSION}`
   }
 
@@ -159,7 +154,6 @@ export default class Client {
           method,
           headers,
           body: bodyAsJsonString,
-          agent: this.#agent,
         }),
         this.#timeoutMs
       )
