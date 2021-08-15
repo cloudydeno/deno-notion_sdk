@@ -5,7 +5,10 @@ function sample<T>(items: T[]): T {
   return items[Math.floor(Math.random() * items.length)];
 }
 
-import {faker} from "https://deno.land/x/deno_faker@v1.0.3/mod.ts"
+import {
+  faker
+} from "https://deno.land/x/deno_faker@v1.0.3/locale/en_US.ts"
+
 import {
   InputPropertyValueMap,
   PropertyMap,
