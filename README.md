@@ -262,7 +262,7 @@ const blocks = collectPaginatedAPI(notion.blocks.children.list, {
 
 This package supports the following minimum versions:
 
-- Runtime: `deno >= v1.11`
+- Runtime: `deno >= v1.20`
 
 Earlier versions may still work, but we encourage people building new applications to upgrade to the current stable.
 
