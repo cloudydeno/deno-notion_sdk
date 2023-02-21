@@ -45,7 +45,7 @@ class MockPaginatedEndpoint<T extends {object: "list"}> {
   constructor(
     private readonly remainingPages: Array<T>,
   ) {}
-  public readonly startCursors = new Array<string|undefined>;
+  public readonly startCursors = new Array<string|undefined>();
   nextPage = async (opts: { start_cursor?: string }) => {
     this.startCursors.push(opts.start_cursor);
     const page = this.remainingPages.shift();
